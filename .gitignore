@@ -34,3 +34,12 @@ DerivedData
 
 Pods/
 
+# Xamarin
+*.dll
+*.framework
+*.exe
+*.dylib
+*.swiftdoc
+*.swiftmodule
+tsout/
+

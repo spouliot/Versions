@@ -10,7 +10,7 @@ extension Array {
   }
 }
 
-public struct Version : Equatable, Comparable {
+public struct Version { //}: Equatable, Comparable {
 
   public let major  : Int
   public let minor  : Int
