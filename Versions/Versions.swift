@@ -11,7 +11,7 @@ public struct App {
   public static var version: String = {
     var version: String = ""
     if let infoDictionary = Bundle.main.infoDictionary {
-      version = infoDictionary["CFBundleShortVersionString"] as! String
+      version = infoDictionary["CFBundleShortVersionString"] as? String ?? "0.0.0.0"
     }
     return version
   }()
