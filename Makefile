@@ -22,7 +22,7 @@ TOM_SWIFTY_OUTPUT=tsout
 all: libXamVersions.dylib
 	@rm -rf $(TOM_SWIFTY_OUTPUT)
 	@mkdir $(TOM_SWIFTY_OUTPUT)
-	mono --debug $(TOM_SWIFTY) --retain-swift-wrappers --swift-bin-path $(SWIFT_BIN) -o $(TOM_SWIFTY_OUTPUT) -C . $(OUTPUT_MODULE)
+	mono --debug $(TOM_SWIFTY) --retain-swift-wrappers --swift-bin-path $(SWIFT_BIN) -o $(TOM_SWIFTY_OUTPUT) -C . -module-name $(OUTPUT_MODULE)
 	$(MAC_mobile_CSC) -unsafe -lib:$(SWIFT_DLL) -r:SwiftRuntimeLibrary.Mac.dll -lib:. tsout/*.cs -t:library -out:$(OUTPUT_MODULE).dll
 
 libXamVersions.dylib: Versions/*.swift
